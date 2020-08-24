@@ -7,24 +7,24 @@ resource "aws_subnet" "public_web" {
   # Classless Inter-Domain Routing
   # サブネットマスクのbit数によって、右側を固定し、余った部分を自由に使える。
   #https://web-camp.online/lesson/curriculums/191/contents/1197
-  cidr_block = "10.0.3.0/24"
-  #  "ap-northeast-1a", 
-  #  "ap-northeast-1c"
+  cidr_block = "10.0.1.0/24"
+  #  "ap-southeast-2a",
+  #  "ap-southeast-2b"
   # https://dev.classmethod.jp/articles/one-liner-for-getting-available-az/
   # availability zoneをまたがったサブネットは作成不可能
-  availability_zone = "ap-northeast-1a"
+  availability_zone = "ap-southeast-2a"
   # これをtrueにすると、そのサブネットで起動したインスタンスにpublicIPを自動で割り当ててくれる。
   map_public_ip_on_launch = true
 
-   tags = {
+  tags = {
     "Name" = "${var.name}-public-0"
   }
 }
 
 resource "aws_subnet" "public_https" {
   vpc_id = aws_vpc.vpc.id
-  cidr_block = "10.0.4.0/24"
-  availability_zone = "ap-northeast-1c"
+  cidr_block = "10.0.2.0/24"
+  availability_zone = "ap-southeast-2b"
   map_public_ip_on_launch = true
 
    tags = {
@@ -32,6 +32,8 @@ resource "aws_subnet" "public_https" {
   }
 }
 
+#######################################
+########## webのルートテーブル ##########
 # gwだけでは通信できないので、ルーティング情報を管理するためのルートテーブルが必要
 resource "aws_route_table" "public_rtb" {
   vpc_id = aws_vpc.vpc.id
@@ -63,12 +65,12 @@ resource "aws_route_table_association" "public_1" {
 
 
 ##############################
-###### privateネットワーク #####
+### privateネットワーク ########
 # マルチAZ化、NATゲートウェイも冗長化
 resource "aws_subnet" "private_db1" {
   vpc_id = aws_vpc.vpc.id
-  cidr_block = "10.0.69.0/24"
-  availability_zone = "ap-northeast-1a"
+  cidr_block = "10.0.65.0/24"
+  availability_zone = "ap-southeast-2a"
   # privateはpublicIPは不要
   map_public_ip_on_launch = false
 
@@ -79,8 +81,8 @@ resource "aws_subnet" "private_db1" {
 
 resource "aws_subnet" "private_db2" {
   vpc_id = aws_vpc.vpc.id
-  cidr_block = "10.0.70.0/24"
-  availability_zone = "ap-northeast-1c"
+  cidr_block = "10.0.66.0/24"
+  availability_zone = "ap-southeast-2b"
   map_public_ip_on_launch = false
 
   tags = {
@@ -88,8 +90,9 @@ resource "aws_subnet" "private_db2" {
   }
 }
 
+
 #########################
-#### ルートテーブル #######
+##### ルートテーブル ######
 resource "aws_route_table" "private_db1" {
   vpc_id = aws_vpc.vpc.id
 
@@ -121,8 +124,8 @@ resource "aws_route_table" "private_db2" {
 
 resource "aws_subnet" "private_redis1" {
   vpc_id = aws_vpc.vpc.id
-  cidr_block = "10.0.71.0/24"
-  availability_zone = "ap-northeast-1a"
+  cidr_block = "10.0.67.0/24"
+  availability_zone = "ap-southeast-2a"
   map_public_ip_on_launch = false
 
   tags = {
@@ -133,15 +136,14 @@ resource "aws_subnet" "private_redis1" {
 
 resource "aws_subnet" "private_redis2" {
   vpc_id = aws_vpc.vpc.id
-  cidr_block = "10.0.72.0/24"
-  availability_zone = "ap-northeast-1c"
+  cidr_block = "10.0.68.0/24"
+  availability_zone = "ap-southeast-2b"
   map_public_ip_on_launch = false
 
   tags = {
     "Name" = "${var.name}-private-redis2"
   }
 }
-
 
 resource "aws_route_table" "private_redis1" {
   vpc_id = aws_vpc.vpc.id
@@ -188,7 +190,7 @@ resource "aws_route_table_association" "private_redis2" {
 resource "aws_subnet" "redash" {
   vpc_id                  = aws_vpc.vpc.id
   cidr_block              = "10.0.4.0/24"
-  availability_zone       = "ap-northeast-1a"
+  availability_zone       = "ap-southeast-2a"
   map_public_ip_on_launch = true
   tags = {
     "Name" = "${var.name}-redash"
@@ -233,9 +235,8 @@ resource "aws_db_subnet_group" "main" {
   }
 }
 
-
 resource "aws_elasticache_subnet_group" "subnet" {
-  "name" = "${var.name}-redissubnet"
+  name = "${var.name}-redissubnet"
   description = "It is a redis subnet group on vpc."
   subnet_ids = [aws_subnet.private_redis1.id, aws_subnet.private_redis2.id]
 }

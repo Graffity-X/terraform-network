@@ -90,29 +90,6 @@ resource "aws_subnet" "private_db2" {
   }
 }
 
-resource "aws_subnet" "private_redis1" {
-  vpc_id = aws_vpc.vpc.id
-  cidr_block = "10.0.67.0/24"
-  availability_zone = "ap-northeast-1a"
-  map_public_ip_on_launch = false
-
-  tags = {
-    "Name" = "${var.name}-private-redis1"
-  }
-}
-
-
-resource "aws_subnet" "private_redis2" {
-  vpc_id = aws_vpc.vpc.id
-  cidr_block = "10.0.68.0/24"
-  availability_zone = "ap-northeast-1c"
-  map_public_ip_on_launch = false
-
-  tags = {
-    "Name" = "${var.name}-private-redis2"
-  }
-}
-
 #########################
 ##### ルートテーブル ######
 resource "aws_route_table" "private_db1" {
@@ -142,6 +119,31 @@ resource "aws_route_table" "private_db2" {
     "Name" = "${var.name}-private-1"
   }
 }
+
+
+resource "aws_subnet" "private_redis1" {
+  vpc_id = aws_vpc.vpc.id
+  cidr_block = "10.0.67.0/24"
+  availability_zone = "ap-northeast-1a"
+  map_public_ip_on_launch = false
+
+  tags = {
+    "Name" = "${var.name}-private-redis1"
+  }
+}
+
+
+resource "aws_subnet" "private_redis2" {
+  vpc_id = aws_vpc.vpc.id
+  cidr_block = "10.0.68.0/24"
+  availability_zone = "ap-northeast-1c"
+  map_public_ip_on_launch = false
+
+  tags = {
+    "Name" = "${var.name}-private-redis2"
+  }
+}
+
 
 resource "aws_route_table" "private_redis1" {
   vpc_id = aws_vpc.vpc.id
@@ -180,57 +182,6 @@ resource "aws_route_table_association" "private_redis1" {
 resource "aws_route_table_association" "private_redis2" {
   subnet_id = aws_subnet.private_redis2.id
   route_table_id = aws_route_table.private_redis2.id
-}
-
-
-##############
-### redash ###
-resource "aws_subnet" "redash" {
-  vpc_id                  = aws_vpc.vpc.id
-  cidr_block              = "10.0.4.0/24"
-  availability_zone       = "ap-northeast-1a"
-  map_public_ip_on_launch = true
-  tags = {
-    "Name" = "${var.name}-redash"
-  }
-}
-
-resource "aws_route_table" "redash_rtb" {
-  vpc_id = aws_vpc.vpc.id
-
-  # ルートテーブルの1レコードに該当。
-  # VPC以外の通信を(gw経由で)インターネットへデータを流すために、デフォルトルートをcidr_blockに指定。
-  route {
-    cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.gw.id
-  }
-
-  tags = {
-    "Name" = "${var.name}-redash-rtb"
-  }
-}
-
-# 「どのルートテーブルを通ってルーティングするのか」はサブネット単位で判断
-# より、サブネットとルートテーブルを関連付け
-# (関連付けを忘れるとデフォルトルートテーブルが使われてしまい、編集とかができなくなるのでなるべく紐付ける。)
-resource "aws_route_table_association" "redash" {
-  subnet_id = aws_subnet.redash.id
-  route_table_id = aws_route_table.redash_rtb.id
-}
-
-
-resource "aws_db_subnet_group" "main" {
-  name        = "${var.name}_dbsubnet"
-  description = "It is a DB subnet group on vpc."
-  subnet_ids  = [aws_subnet.private_db1.id, aws_subnet.private_db2.id]
-
-  tags = {
-    "Name" = "${var.name}-dbsubnet"
-  }
-
-  lifecycle {
-    ignore_changes = ["name"]
-  }
 }
 
 #############################
