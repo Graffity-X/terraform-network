@@ -1,9 +1,25 @@
-## config.tf.sample
+## init
 
 ```
 $ cp config.tf.sample config.tf
 ```
 
+
+## 実行
+
+common: リージョンごとのVPC、セキュリティグループ 
+env: 各環境ごとのsubnet
+
+より、
+
+common => env
+の順で実行するべし。
+
+```
+$ terraform init
+($ terraform plan)
+$ terraform apply
+```
 
 
 ## 1-1.webコンソールでアクセスキー、シークレットキーありのユーザを作成。
