@@ -1,25 +1,14 @@
-## init
+# init
 
+1. AWSのマネジメントコンソールで、tfstate用のbucketを作成。
+
+2. 設定ファイルの作成
 ```
 $ cp config.tf.sample config.tf
+$ cp terraform.tfvars.sample terraform.tfvars.tf
 ```
 
-
-## 実行
-
-common: リージョンごとのVPC、セキュリティグループ 
-env: 各環境ごとのsubnet
-
-より、
-
-common => env
-の順で実行するべし。
-
-```
-$ terraform init
-($ terraform plan)
-$ terraform apply
-```
+=> 自分の環境に合うように書き換えてください。(上で作成したbucketなど)
 
 
 ## 1-1.webコンソールでアクセスキー、シークレットキーありのユーザを作成。
@@ -62,3 +51,22 @@ $ docker run --it terraform bash
 ## 2-5 CircleCIのenvrionmentに設定
 - AWS_ACCESS_KEY_ID: outputされたアクセスキー
 - AWS_SECRET_ACCESS_KEY: outputされたシークレットキーを復号化したもの
+
+
+# 3 実行
+
+common: リージョンごとのVPC、セキュリティグループ 
+env: 各環境ごとのsubnet
+
+より、
+
+common => env
+の順で実行する。
+
+各カレントディレクトリで
+
+```
+$ terraform init
+($ terraform plan)
+$ terraform apply
+```
