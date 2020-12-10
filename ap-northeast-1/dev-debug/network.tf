@@ -7,7 +7,7 @@ resource "aws_subnet" "public_web" {
   # Classless Inter-Domain Routing
   # サブネットマスクのbit数によって、右側を固定し、余った部分を自由に使える。
   #https://web-camp.online/lesson/curriculums/191/contents/1197
-  cidr_block = "10.0.11.0/24"
+  cidr_block = "10.0.51.0/24"
   #  "ap-northeast-1a",
   #  "ap-northeast-1c"
   # https://dev.classmethod.jp/articles/one-liner-for-getting-available-az/
@@ -23,7 +23,7 @@ resource "aws_subnet" "public_web" {
 
 resource "aws_subnet" "public_https" {
   vpc_id                  = data.terraform_remote_state.common.outputs.aws_vpc.id
-  cidr_block              = "10.0.12.0/24"
+  cidr_block              = "10.0.52.0/24"
   availability_zone       = "ap-northeast-1c"
   map_public_ip_on_launch = true
 
@@ -67,7 +67,7 @@ resource "aws_route_table_association" "public_1" {
 ### redash ###
 resource "aws_subnet" "redash" {
   vpc_id                  = data.terraform_remote_state.common.outputs.aws_vpc.id
-  cidr_block              = "10.0.14.0/24"
+  cidr_block              = "10.0.54.0/24"
   availability_zone       = "ap-northeast-1a"
   map_public_ip_on_launch = true
   tags = {
@@ -99,11 +99,11 @@ resource "aws_route_table_association" "redash" {
 }
 
 
-##############
+#############
 ### front ###
 resource "aws_subnet" "front" {
   vpc_id                  = data.terraform_remote_state.common.outputs.aws_vpc.id
-  cidr_block              = "10.0.15.0/24"
+  cidr_block              = "10.0.55.0/24"
   availability_zone       = "ap-northeast-1a"
   map_public_ip_on_launch = true
   tags = {
@@ -159,7 +159,7 @@ resource "aws_db_subnet_group" "main" {
 
 resource "aws_subnet" "private_db1" {
   vpc_id            = data.terraform_remote_state.common.outputs.aws_vpc.id
-  cidr_block        = "10.0.75.0/24"
+  cidr_block        = "10.0.175.0/24"
   availability_zone = "ap-northeast-1a"
   # privateはpublicIPは不要
   map_public_ip_on_launch = false
@@ -171,7 +171,7 @@ resource "aws_subnet" "private_db1" {
 
 resource "aws_subnet" "private_db2" {
   vpc_id                  = data.terraform_remote_state.common.outputs.aws_vpc.id
-  cidr_block              = "10.0.76.0/24"
+  cidr_block              = "10.0.176.0/24"
   availability_zone       = "ap-northeast-1c"
   map_public_ip_on_launch = false
 
@@ -223,7 +223,7 @@ resource "aws_elasticache_subnet_group" "subnet" {
 
 resource "aws_subnet" "private_redis1" {
   vpc_id                  = data.terraform_remote_state.common.outputs.aws_vpc.id
-  cidr_block              = "10.0.77.0/24"
+  cidr_block              = "10.0.177.0/24"
   availability_zone       = "ap-northeast-1a"
   map_public_ip_on_launch = false
 
@@ -235,7 +235,7 @@ resource "aws_subnet" "private_redis1" {
 
 resource "aws_subnet" "private_redis2" {
   vpc_id                  = data.terraform_remote_state.common.outputs.aws_vpc.id
-  cidr_block              = "10.0.78.0/24"
+  cidr_block              = "10.0.178.0/24"
   availability_zone       = "ap-northeast-1c"
   map_public_ip_on_launch = false
 

@@ -1,3 +1,11 @@
+## 注意
+
+config.tf
+terraform.tfvars
+を環境に合わせ変更。
+
+network.tfのsubnetを他と被らないようにする。
+
 # init
 
 1. AWSのマネジメントコンソールで、tfstate用のbucketを作成。
