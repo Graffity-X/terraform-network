@@ -15,7 +15,7 @@ terraform {
     shared_credentials_file = "~/.aws/credentials"
     profile                 = "kazuki.matsumoto"
     bucket                  = "besides-terraform-back"
-    key                     = "ap-northeast-1/network-dev/terraform.tfstate"
+    key                     = "ap-northeast-1/network-dev-debug/terraform.tfstate"
     region                  = "ap-northeast-1"
   }
 }

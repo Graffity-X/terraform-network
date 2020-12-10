@@ -1,9 +1,3 @@
-
-terraform {
-  required_version = ">= 0.12"
-}
-
-
 provider "aws" {
   shared_credentials_file = "~/.aws/credentials"
   profile                 = "kazuki.matsumoto"
@@ -11,11 +5,12 @@ provider "aws" {
 }
 
 terraform {
+  required_version = ">= 0.12"
   backend "s3" {
     shared_credentials_file = "~/.aws/credentials"
     profile                 = "kazuki.matsumoto"
     bucket                  = "besides-terraform-back"
-    key                     = "ap-northeast-1/network-dev/terraform.tfstate"
+    key                     = "ap-northeast-1/network-dev2/terraform.tfstate"
     region                  = "ap-northeast-1"
   }
 }
