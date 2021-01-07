@@ -1,0 +1,1788 @@
+2021/01/06 18:57:31 [INFO] Terraform version: 0.14.3  
+2021/01/06 18:57:31 [INFO] Go runtime version: go1.15.2
+2021/01/06 18:57:31 [INFO] CLI args: []string{"/usr/local/Cellar/tfenv/2.0.0/versions/0.14.3/terraform", "plan"}
+2021/01/06 18:57:31 [DEBUG] Attempting to open CLI config file: /Users/onosemoe/.terraformrc
+2021/01/06 18:57:31 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2021/01/06 18:57:31 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2021/01/06 18:57:31 [DEBUG] ignoring non-existing provider search directory /Users/onosemoe/.terraform.d/plugins
+2021/01/06 18:57:31 [DEBUG] ignoring non-existing provider search directory /Users/onosemoe/Library/Application Support/io.terraform/plugins
+2021/01/06 18:57:31 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2021/01/06 18:57:31 [INFO] CLI command args: []string{"plan"}
+2021/01/06 18:57:31 [TRACE] Meta.Backend: built configuration for "s3" backend with hash value 2564969222
+2021/01/06 18:57:31 [TRACE] Preserving existing state lineage "e1d00b8c-3e1d-9530-5f63-af24f5bc7b0b"
+2021/01/06 18:57:31 [TRACE] Preserving existing state lineage "e1d00b8c-3e1d-9530-5f63-af24f5bc7b0b"
+2021/01/06 18:57:31 [TRACE] Meta.Backend: working directory was previously initialized for "s3" backend
+2021/01/06 18:57:31 [TRACE] Meta.Backend: using already-initialized, unchanged "s3" backend configuration
+2021/01/06 18:57:31 [INFO] AWS Auth provider used: "SharedCredentialsProvider"
+2021/01/06 18:57:31 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2021/01/06 18:57:32 [TRACE] Meta.Backend: instantiated backend of type *s3.Backend
+2021/01/06 18:57:32 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2021/01/06 18:57:32 [TRACE] getproviders.SearchLocalDirectory: .terraform/providers is a symlink to .terraform/providers
+2021/01/06 18:57:32 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/aws v3.22.0 for darwin_amd64 at .terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64
+2021/01/06 18:57:32 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64 as a candidate package for registry.terraform.io/hashicorp/aws 3.22.0
+2021/01/06 18:57:32 [DEBUG] checking for provisioner in "."
+2021/01/06 18:57:32 [DEBUG] checking for provisioner in "/usr/local/Cellar/tfenv/2.0.0/versions/0.14.3"
+2021/01/06 18:57:32 [INFO] Failed to read plugin lock file .terraform/plugins/darwin_amd64/lock.json: open .terraform/plugins/darwin_amd64/lock.json: no such file or directory
+2021/01/06 18:57:32 [TRACE] Meta.Backend: backend *s3.Backend does not support operations, so wrapping it in a local backend
+2021/01/06 18:57:32 [INFO] backend/local: starting Plan operation
+2021/01/06 18:57:32 [TRACE] backend/local: requesting state manager for workspace "default"
+2021/01/06 18:57:33 [TRACE] backend/local: requesting state lock for workspace "default"
+2021/01/06 18:57:33 [TRACE] backend/local: reading remote state for workspace "default"
+2021/01/06 18:57:33 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2021/01/06 18:57:33 [TRACE] backend/local: building context for current working directory
+2021/01/06 18:57:33 [DEBUG] backend/local: will prompt for input of unset required variables [name region]
+2021/01/06 18:57:33 [DEBUG] command: asking for input: "var.name"
+2021/01/06 19:00:36 [DEBUG] command: asking for input: "var.region"
+2021/01/06 19:00:36 [TRACE] terraform.NewContext: starting
+2021/01/06 19:00:36 [TRACE] terraform.NewContext: loading provider schemas
+2021/01/06 19:00:36 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/aws"
+2021-01-06T19:00:36.480+0900 [INFO]  plugin: configuring client automatic mTLS
+2021-01-06T19:00:36.499+0900 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5]
+2021-01-06T19:00:36.514+0900 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5 pid=75100
+2021-01-06T19:00:36.514+0900 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5
+2021-01-06T19:00:38.045+0900 [INFO]  plugin.terraform-provider-aws_v3.22.0_x5: configuring server automatic mTLS: timestamp=2021-01-06T19:00:38.045+0900
+2021-01-06T19:00:38.067+0900 [DEBUG] plugin: using plugin: version=5
+2021-01-06T19:00:38.067+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: plugin address: address=/var/folders/pd/949hjn3j2970x38wh0stzjfh0000gn/T/plugin364984939 network=unix timestamp=2021-01-06T19:00:38.067+0900
+2021/01/06 19:00:38 [TRACE] GRPCProvider: GetSchema
+2021-01-06T19:00:38.104+0900 [TRACE] plugin.stdio: waiting for stdio data
+2021/01/06 19:00:38 [TRACE] GRPCProvider: Close
+2021-01-06T19:00:38.174+0900 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-01-06T19:00:38.177+0900 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5 pid=75100
+2021-01-06T19:00:38.177+0900 [DEBUG] plugin: plugin exited
+2021/01/06 19:00:38 [TRACE] terraform.NewContext: complete
+2021/01/06 19:00:38 [TRACE] backend/local: finished building terraform.Context
+2021/01/06 19:00:38 [TRACE] backend/local: requesting interactive input, if necessary
+2021/01/06 19:00:38 [TRACE] Context.Input: Prompting for provider arguments
+2021/01/06 19:00:38 [TRACE] Context.Input: Provider provider.aws declared at config.tf:1,1-15
+2021/01/06 19:00:38 [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2021/01/06 19:00:38 [TRACE] backend/local: running validation operation
+2021/01/06 19:00:38 [INFO] terraform: building graph: GraphTypeValidate
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/01/06 19:00:38 [TRACE] ConfigTransformer: Starting for path: 
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_internet_gateway.gw - *terraform.NodeValidatableResource
+  aws_security_group.app - *terraform.NodeValidatableResource
+  aws_security_group.db - *terraform.NodeValidatableResource
+  aws_security_group.redis - *terraform.NodeValidatableResource
+  aws_security_group_rule.all - *terraform.NodeValidatableResource
+  aws_security_group_rule.db - *terraform.NodeValidatableResource
+  aws_security_group_rule.https - *terraform.NodeValidatableResource
+  aws_security_group_rule.redis - *terraform.NodeValidatableResource
+  aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+  aws_security_group_rule.web - *terraform.NodeValidatableResource
+  aws_vpc.vpc - *terraform.NodeValidatableResource
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_internet_gateway.gw - *terraform.NodeValidatableResource
+  aws_security_group.app - *terraform.NodeValidatableResource
+  aws_security_group.db - *terraform.NodeValidatableResource
+  aws_security_group.redis - *terraform.NodeValidatableResource
+  aws_security_group_rule.all - *terraform.NodeValidatableResource
+  aws_security_group_rule.db - *terraform.NodeValidatableResource
+  aws_security_group_rule.https - *terraform.NodeValidatableResource
+  aws_security_group_rule.redis - *terraform.NodeValidatableResource
+  aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+  aws_security_group_rule.web - *terraform.NodeValidatableResource
+  aws_vpc.vpc - *terraform.NodeValidatableResource
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_vpc as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_internet_gateway as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_redis as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_rule_https as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_rule_db as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_rule_redis as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_app as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_db as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_rule_ssh as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_rule_web as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_rule_all as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_internet_gateway.gw - *terraform.NodeValidatableResource
+  aws_security_group.app - *terraform.NodeValidatableResource
+  aws_security_group.db - *terraform.NodeValidatableResource
+  aws_security_group.redis - *terraform.NodeValidatableResource
+  aws_security_group_rule.all - *terraform.NodeValidatableResource
+  aws_security_group_rule.db - *terraform.NodeValidatableResource
+  aws_security_group_rule.https - *terraform.NodeValidatableResource
+  aws_security_group_rule.redis - *terraform.NodeValidatableResource
+  aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+  aws_security_group_rule.web - *terraform.NodeValidatableResource
+  aws_vpc.vpc - *terraform.NodeValidatableResource
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+  output.aws_vpc - *terraform.NodeApplyableOutput
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/01/06 19:00:38 [TRACE] StateTransformer: state is empty, so nothing to do
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group_rule.redis" (*terraform.NodeValidatableResource) config from default.tf:123,1-43
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group_rule.redis
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group_rule.all" (*terraform.NodeValidatableResource) config from default.tf:78,1-41
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group_rule.all
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.db" (*terraform.NodeValidatableResource) config from default.tf:90,1-35
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.db
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group_rule.https" (*terraform.NodeValidatableResource) config from default.tf:65,1-43
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group_rule.https
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.redis" (*terraform.NodeValidatableResource) config from default.tf:113,1-38
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.redis
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_vpc.vpc" (*terraform.NodeValidatableResource) config from default.tf:3,1-25
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_vpc.vpc
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_internet_gateway.gw" (*terraform.NodeValidatableResource) config from default.tf:22,1-37
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_internet_gateway.gw
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group_rule.ssh" (*terraform.NodeValidatableResource) config from default.tf:43,1-41
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group_rule.ssh
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.app" (*terraform.NodeValidatableResource) config from default.tf:33,1-36
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.app
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group_rule.db" (*terraform.NodeValidatableResource) config from default.tf:100,1-40
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group_rule.db
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group_rule.web" (*terraform.NodeValidatableResource) config from default.tf:52,1-41
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group_rule.web
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/01/06 19:00:38 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from config.tf:1,1-15
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_internet_gateway.gw - *terraform.NodeValidatableResource
+  aws_security_group.app - *terraform.NodeValidatableResource
+  aws_security_group.db - *terraform.NodeValidatableResource
+  aws_security_group.redis - *terraform.NodeValidatableResource
+  aws_security_group_rule.all - *terraform.NodeValidatableResource
+  aws_security_group_rule.db - *terraform.NodeValidatableResource
+  aws_security_group_rule.https - *terraform.NodeValidatableResource
+  aws_security_group_rule.redis - *terraform.NodeValidatableResource
+  aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+  aws_security_group_rule.web - *terraform.NodeValidatableResource
+  aws_vpc.vpc - *terraform.NodeValidatableResource
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+  output.aws_vpc - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group_rule.all
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group_rule.all" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group_rule.ssh
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group_rule.ssh" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.db
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group.db" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.app
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group.app" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_vpc.vpc
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_vpc.vpc" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_internet_gateway.gw
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_internet_gateway.gw" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group_rule.db
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group_rule.db" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group_rule.redis
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group_rule.redis" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group_rule.https
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group_rule.https" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.redis
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group.redis" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group_rule.web
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group_rule.web" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.db - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.redis - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.all - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.db - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.https - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+  output.aws_vpc - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.db - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.redis - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.all - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.db - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.https - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+  output.aws_vpc - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group_rule.ssh
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.app
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_vpc.vpc
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_internet_gateway.gw
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group_rule.db
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group_rule.web
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group_rule.redis
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group_rule.https
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.redis
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group_rule.all
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.db
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group.redis" references: [aws_vpc.vpc var.name]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_vpc" references: [aws_vpc.vpc]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_redis" references: [aws_security_group.redis]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_app" references: [aws_security_group.app]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_rule_ssh" references: [aws_security_group_rule.ssh]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group_rule.all" references: [aws_security_group.app]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group.db" references: [aws_vpc.vpc var.name]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group_rule.https" references: [aws_security_group.app]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group.app" references: [var.name var.name aws_vpc.vpc]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "var.name" references: []
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_rule_https" references: [aws_security_group_rule.https]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_rule_redis" references: [aws_security_group_rule.redis]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_vpc.vpc" references: [var.name]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_internet_gateway.gw" references: [var.name aws_vpc.vpc]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group_rule.ssh" references: [aws_security_group.app]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group_rule.db" references: [aws_security_group.app aws_security_group.db]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group_rule.web" references: [aws_security_group.app]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_db" references: [aws_security_group.db]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_rule_db" references: [aws_security_group_rule.db]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_rule_web" references: [aws_security_group_rule.web]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_rule_all" references: [aws_security_group_rule.all]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group_rule.redis" references: [aws_security_group.app aws_security_group.redis]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "var.region" references: []
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_internet_gateway" references: [aws_internet_gateway.gw]
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.app - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.db - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.redis - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group_rule.all - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.db - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.db - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.https - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.redis - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.web - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    aws_internet_gateway.gw - *terraform.NodeValidatableResource
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+    aws_security_group.app - *terraform.NodeValidatableResource
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+    aws_security_group.db - *terraform.NodeValidatableResource
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    aws_security_group.redis - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    aws_security_group_rule.all - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    aws_security_group_rule.db - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    aws_security_group_rule.https - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    aws_security_group_rule.redis - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    aws_security_group_rule.web - *terraform.NodeValidatableResource
+  output.aws_vpc - *terraform.NodeApplyableOutput
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.app - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.db - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.redis - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group_rule.all - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.db - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.db - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.https - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.redis - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.web - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.db - *terraform.NodeValidatableResource
+    aws_security_group.redis - *terraform.NodeValidatableResource
+    aws_security_group_rule.all - *terraform.NodeValidatableResource
+    aws_security_group_rule.db - *terraform.NodeValidatableResource
+    aws_security_group_rule.https - *terraform.NodeValidatableResource
+    aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    aws_security_group_rule.web - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    output.aws_security_group_app - *terraform.NodeApplyableOutput
+    output.aws_security_group_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    output.aws_vpc - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    aws_internet_gateway.gw - *terraform.NodeValidatableResource
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+    aws_security_group.app - *terraform.NodeValidatableResource
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+    aws_security_group.db - *terraform.NodeValidatableResource
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    aws_security_group.redis - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    aws_security_group_rule.all - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    aws_security_group_rule.db - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    aws_security_group_rule.https - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    aws_security_group_rule.redis - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    aws_security_group_rule.web - *terraform.NodeValidatableResource
+  output.aws_vpc - *terraform.NodeApplyableOutput
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.app - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.db - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.redis - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group_rule.all - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.db - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.db - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.https - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.redis - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.web - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.db - *terraform.NodeValidatableResource
+    aws_security_group.redis - *terraform.NodeValidatableResource
+    aws_security_group_rule.all - *terraform.NodeValidatableResource
+    aws_security_group_rule.db - *terraform.NodeValidatableResource
+    aws_security_group_rule.https - *terraform.NodeValidatableResource
+    aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    aws_security_group_rule.web - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    output.aws_security_group_app - *terraform.NodeApplyableOutput
+    output.aws_security_group_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    output.aws_vpc - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    aws_internet_gateway.gw - *terraform.NodeValidatableResource
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+    aws_security_group.app - *terraform.NodeValidatableResource
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+    aws_security_group.db - *terraform.NodeValidatableResource
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    aws_security_group.redis - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    aws_security_group_rule.all - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    aws_security_group_rule.db - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    aws_security_group_rule.https - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    aws_security_group_rule.redis - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    aws_security_group_rule.web - *terraform.NodeValidatableResource
+  output.aws_vpc - *terraform.NodeApplyableOutput
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.db - *terraform.NodeValidatableResource
+    aws_security_group.redis - *terraform.NodeValidatableResource
+    aws_security_group_rule.all - *terraform.NodeValidatableResource
+    aws_security_group_rule.db - *terraform.NodeValidatableResource
+    aws_security_group_rule.https - *terraform.NodeValidatableResource
+    aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    aws_security_group_rule.web - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.app - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.db - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.redis - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group_rule.all - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.db - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.db - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.https - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.redis - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.web - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.db - *terraform.NodeValidatableResource
+    aws_security_group.redis - *terraform.NodeValidatableResource
+    aws_security_group_rule.all - *terraform.NodeValidatableResource
+    aws_security_group_rule.db - *terraform.NodeValidatableResource
+    aws_security_group_rule.https - *terraform.NodeValidatableResource
+    aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    aws_security_group_rule.web - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    output.aws_security_group_app - *terraform.NodeApplyableOutput
+    output.aws_security_group_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    output.aws_vpc - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    aws_internet_gateway.gw - *terraform.NodeValidatableResource
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+    aws_security_group.app - *terraform.NodeValidatableResource
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+    aws_security_group.db - *terraform.NodeValidatableResource
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    aws_security_group.redis - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    aws_security_group_rule.all - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    aws_security_group_rule.db - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    aws_security_group_rule.https - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    aws_security_group_rule.redis - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    aws_security_group_rule.web - *terraform.NodeValidatableResource
+  output.aws_vpc - *terraform.NodeApplyableOutput
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.db - *terraform.NodeValidatableResource
+    aws_security_group.redis - *terraform.NodeValidatableResource
+    aws_security_group_rule.all - *terraform.NodeValidatableResource
+    aws_security_group_rule.db - *terraform.NodeValidatableResource
+    aws_security_group_rule.https - *terraform.NodeValidatableResource
+    aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    aws_security_group_rule.web - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+  aws_security_group.app - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+  aws_security_group.db - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+  aws_security_group.redis - *terraform.NodeValidatableResource
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+  aws_security_group_rule.all - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+  aws_security_group_rule.db - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.db - *terraform.NodeValidatableResource
+  aws_security_group_rule.https - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+  aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+    aws_security_group.redis - *terraform.NodeValidatableResource
+  aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+  aws_security_group_rule.web - *terraform.NodeValidatableResource
+    aws_security_group.app - *terraform.NodeValidatableResource
+  aws_vpc.vpc - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    output.aws_security_group_app - *terraform.NodeApplyableOutput
+    output.aws_security_group_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    output.aws_vpc - *terraform.NodeApplyableOutput
+    var.region - *terraform.NodeRootVariable
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    aws_internet_gateway.gw - *terraform.NodeValidatableResource
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+    aws_security_group.app - *terraform.NodeValidatableResource
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+    aws_security_group.db - *terraform.NodeValidatableResource
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    aws_security_group.redis - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    aws_security_group_rule.all - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    aws_security_group_rule.db - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    aws_security_group_rule.https - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    aws_security_group_rule.redis - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    aws_security_group_rule.web - *terraform.NodeValidatableResource
+  output.aws_vpc - *terraform.NodeApplyableOutput
+    aws_vpc.vpc - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_internet_gateway.gw - *terraform.NodeValidatableResource
+    aws_security_group_rule.all - *terraform.NodeValidatableResource
+    aws_security_group_rule.db - *terraform.NodeValidatableResource
+    aws_security_group_rule.https - *terraform.NodeValidatableResource
+    aws_security_group_rule.redis - *terraform.NodeValidatableResource
+    aws_security_group_rule.ssh - *terraform.NodeValidatableResource
+    aws_security_group_rule.web - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [DEBUG] Starting graph walk: walkValidate
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/01/06 19:00:38 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "var.name"
+2021/01/06 19:00:38 [TRACE] vertex "var.name": starting visit (*terraform.NodeRootVariable)
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "var.region"
+2021/01/06 19:00:38 [TRACE] vertex "var.name": visit complete
+2021/01/06 19:00:38 [TRACE] vertex "var.region": starting visit (*terraform.NodeRootVariable)
+2021/01/06 19:00:38 [TRACE] vertex "var.region": visit complete
+2021-01-06T19:00:38.180+0900 [INFO]  plugin: configuring client automatic mTLS
+2021-01-06T19:00:38.196+0900 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5]
+2021-01-06T19:00:38.210+0900 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5 pid=75109
+2021-01-06T19:00:38.210+0900 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5
+2021-01-06T19:00:38.243+0900 [INFO]  plugin.terraform-provider-aws_v3.22.0_x5: configuring server automatic mTLS: timestamp=2021-01-06T19:00:38.243+0900
+2021-01-06T19:00:38.264+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: plugin address: address=/var/folders/pd/949hjn3j2970x38wh0stzjfh0000gn/T/plugin545236400 network=unix timestamp=2021-01-06T19:00:38.264+0900
+2021-01-06T19:00:38.264+0900 [DEBUG] plugin: using plugin: version=5
+2021/01/06 19:00:38 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2021-01-06T19:00:38.300+0900 [TRACE] plugin.stdio: waiting for stdio data
+2021/01/06 19:00:38 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2021/01/06 19:00:38 [TRACE] GRPCProvider: GetSchema
+2021/01/06 19:00:38 [TRACE] GRPCProvider: PrepareProviderConfig
+2021/01/06 19:00:38 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "aws_vpc.vpc"
+2021/01/06 19:00:38 [TRACE] vertex "aws_vpc.vpc": starting visit (*terraform.NodeValidatableResource)
+2021/01/06 19:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/01/06 19:00:38 [TRACE] vertex "aws_vpc.vpc": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "aws_security_group.app"
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group.app": starting visit (*terraform.NodeValidatableResource)
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "aws_security_group.db"
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group.db": starting visit (*terraform.NodeValidatableResource)
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "aws_internet_gateway.gw"
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "aws_security_group.redis"
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group.redis": starting visit (*terraform.NodeValidatableResource)
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "output.aws_vpc"
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_vpc": starting visit (*terraform.NodeApplyableOutput)
+2021/01/06 19:00:38 [TRACE] vertex "aws_internet_gateway.gw": starting visit (*terraform.NodeValidatableResource)
+2021/01/06 19:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/01/06 19:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/01/06 19:00:38 [TRACE] ExecuteWriteOutput: Saving Create change for output.aws_vpc in changeset
+2021/01/06 19:00:38 [TRACE] EvalWriteOutput: Removing output.aws_vpc from state (it is now null)
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_vpc": visit complete
+2021/01/06 19:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/01/06 19:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group.app": visit complete
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group.redis": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "aws_security_group_rule.ssh"
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "aws_security_group_rule.redis"
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group_rule.ssh": starting visit (*terraform.NodeValidatableResource)
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "output.aws_security_group_redis"
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group_rule.redis": starting visit (*terraform.NodeValidatableResource)
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_redis": starting visit (*terraform.NodeApplyableOutput)
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "aws_security_group_rule.all"
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group_rule.all": starting visit (*terraform.NodeValidatableResource)
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group.db": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "output.aws_security_group_db"
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_db": starting visit (*terraform.NodeApplyableOutput)
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "output.aws_security_group_app"
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "aws_security_group_rule.https"
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_app": starting visit (*terraform.NodeApplyableOutput)
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group_rule.https": starting visit (*terraform.NodeValidatableResource)
+2021/01/06 19:00:38 [TRACE] vertex "aws_internet_gateway.gw": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "output.aws_internet_gateway"
+2021/01/06 19:00:38 [TRACE] ExecuteWriteOutput: Saving Create change for output.aws_security_group_db in changeset
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_internet_gateway": starting visit (*terraform.NodeApplyableOutput)
+2021/01/06 19:00:38 [TRACE] ExecuteWriteOutput: Saving Create change for output.aws_security_group_app in changeset
+2021/01/06 19:00:38 [TRACE] EvalWriteOutput: Removing output.aws_security_group_app from state (it is now null)
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "aws_security_group_rule.web"
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "aws_security_group_rule.db"
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group_rule.db": starting visit (*terraform.NodeValidatableResource)
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group_rule.web": starting visit (*terraform.NodeValidatableResource)
+2021/01/06 19:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/01/06 19:00:38 [TRACE] ExecuteWriteOutput: Saving Create change for output.aws_security_group_redis in changeset
+2021/01/06 19:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/01/06 19:00:38 [TRACE] EvalWriteOutput: Removing output.aws_security_group_redis from state (it is now null)
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_redis": visit complete
+2021/01/06 19:00:38 [TRACE] ExecuteWriteOutput: Saving Create change for output.aws_internet_gateway in changeset
+2021/01/06 19:00:38 [TRACE] EvalWriteOutput: Removing output.aws_internet_gateway from state (it is now null)
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_internet_gateway": visit complete
+2021/01/06 19:00:38 [TRACE] EvalWriteOutput: Removing output.aws_security_group_db from state (it is now null)
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_db": visit complete
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_app": visit complete
+2021/01/06 19:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/01/06 19:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/01/06 19:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/01/06 19:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group_rule.all": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "output.aws_security_group_rule_all"
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_rule_all": starting visit (*terraform.NodeApplyableOutput)
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group_rule.ssh": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "output.aws_security_group_rule_ssh"
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_rule_ssh": starting visit (*terraform.NodeApplyableOutput)
+2021/01/06 19:00:38 [TRACE] ExecuteWriteOutput: Saving Create change for output.aws_security_group_rule_all in changeset
+2021/01/06 19:00:38 [TRACE] EvalWriteOutput: Removing output.aws_security_group_rule_all from state (it is now null)
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_rule_all": visit complete
+2021/01/06 19:00:38 [TRACE] ExecuteWriteOutput: Saving Create change for output.aws_security_group_rule_ssh in changeset
+2021/01/06 19:00:38 [TRACE] EvalWriteOutput: Removing output.aws_security_group_rule_ssh from state (it is now null)
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_rule_ssh": visit complete
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group_rule.web": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "output.aws_security_group_rule_web"
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_rule_web": starting visit (*terraform.NodeApplyableOutput)
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group_rule.https": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "output.aws_security_group_rule_https"
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group_rule.db": visit complete
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_rule_https": starting visit (*terraform.NodeApplyableOutput)
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "output.aws_security_group_rule_db"
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_rule_db": starting visit (*terraform.NodeApplyableOutput)
+2021/01/06 19:00:38 [TRACE] ExecuteWriteOutput: Saving Create change for output.aws_security_group_rule_web in changeset
+2021/01/06 19:00:38 [TRACE] EvalWriteOutput: Removing output.aws_security_group_rule_web from state (it is now null)
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_rule_web": visit complete
+2021/01/06 19:00:38 [TRACE] ExecuteWriteOutput: Saving Create change for output.aws_security_group_rule_https in changeset
+2021/01/06 19:00:38 [TRACE] EvalWriteOutput: Removing output.aws_security_group_rule_https from state (it is now null)
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_rule_https": visit complete
+2021/01/06 19:00:38 [TRACE] vertex "aws_security_group_rule.redis": visit complete
+2021/01/06 19:00:38 [TRACE] ExecuteWriteOutput: Saving Create change for output.aws_security_group_rule_db in changeset
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "output.aws_security_group_rule_redis"
+2021/01/06 19:00:38 [TRACE] EvalWriteOutput: Removing output.aws_security_group_rule_db from state (it is now null)
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_rule_redis": starting visit (*terraform.NodeApplyableOutput)
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_rule_db": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2021/01/06 19:00:38 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2021/01/06 19:00:38 [TRACE] GRPCProvider: Close
+2021/01/06 19:00:38 [TRACE] ExecuteWriteOutput: Saving Create change for output.aws_security_group_rule_redis in changeset
+2021/01/06 19:00:38 [TRACE] EvalWriteOutput: Removing output.aws_security_group_rule_redis from state (it is now null)
+2021/01/06 19:00:38 [TRACE] vertex "output.aws_security_group_rule_redis": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2021/01/06 19:00:38 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2021/01/06 19:00:38 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2021-01-06T19:00:38.433+0900 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-01-06T19:00:38.436+0900 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5 pid=75109
+2021-01-06T19:00:38.436+0900 [DEBUG] plugin: plugin exited
+2021/01/06 19:00:38 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "root"
+2021/01/06 19:00:38 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021/01/06 19:00:38 [TRACE] vertex "root": visit complete
+2021/01/06 19:00:38 [INFO] backend/local: plan calling Plan
+2021/01/06 19:00:38 [INFO] terraform: building graph: GraphTypePlan
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/01/06 19:00:38 [TRACE] ConfigTransformer: Starting for path: 
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+  aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+  aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_rule_all as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_rule_db as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_rule_redis as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_app as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_db as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_rule_ssh as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_rule_web as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_vpc as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_internet_gateway as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_redis as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] OutputTransformer: adding aws_security_group_rule_https as *terraform.NodeApplyableOutput
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+  aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+  output.aws_vpc - *terraform.NodeApplyableOutput
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/01/06 19:00:38 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.app (expand)" (*terraform.nodeExpandPlannableResource) config from default.tf:33,1-36
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.app (expand)
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_vpc.vpc (expand)" (*terraform.nodeExpandPlannableResource) config from default.tf:3,1-25
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_vpc.vpc (expand)
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group_rule.redis (expand)" (*terraform.nodeExpandPlannableResource) config from default.tf:123,1-43
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group_rule.redis (expand)
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group_rule.https (expand)" (*terraform.nodeExpandPlannableResource) config from default.tf:65,1-43
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group_rule.https (expand)
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group_rule.ssh (expand)" (*terraform.nodeExpandPlannableResource) config from default.tf:43,1-41
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group_rule.ssh (expand)
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group_rule.all (expand)" (*terraform.nodeExpandPlannableResource) config from default.tf:78,1-41
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group_rule.all (expand)
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.db (expand)" (*terraform.nodeExpandPlannableResource) config from default.tf:90,1-35
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.db (expand)
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.redis (expand)" (*terraform.nodeExpandPlannableResource) config from default.tf:113,1-38
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.redis (expand)
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_internet_gateway.gw (expand)" (*terraform.nodeExpandPlannableResource) config from default.tf:22,1-37
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_internet_gateway.gw (expand)
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group_rule.db (expand)" (*terraform.nodeExpandPlannableResource) config from default.tf:100,1-40
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group_rule.db (expand)
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group_rule.web (expand)" (*terraform.nodeExpandPlannableResource) config from default.tf:52,1-41
+2021/01/06 19:00:38 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group_rule.web (expand)
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/01/06 19:00:38 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from config.tf:1,1-15
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+  aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+  output.aws_vpc - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group_rule.https (expand)
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group_rule.https (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group_rule.all (expand)
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group_rule.all (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.app (expand)
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group.app (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_vpc.vpc (expand)
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_vpc.vpc (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group_rule.redis (expand)
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group_rule.redis (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group_rule.web (expand)
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group_rule.web (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group_rule.ssh (expand)
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group_rule.ssh (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.db (expand)
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group.db (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.redis (expand)
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group.redis (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_internet_gateway.gw (expand)
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_internet_gateway.gw (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group_rule.db (expand)
+2021/01/06 19:00:38 [DEBUG] ProviderTransformer: "aws_security_group_rule.db (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+  output.aws_vpc - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/01/06 19:00:38 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+  output.aws_vpc - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group_rule.web (expand)
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.app (expand)
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_vpc.vpc (expand)
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group_rule.https (expand)
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group_rule.ssh (expand)
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group_rule.all (expand)
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.db (expand)
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group_rule.redis (expand)
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.redis (expand)
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_internet_gateway.gw (expand)
+2021/01/06 19:00:38 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group_rule.db (expand)
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_redis" references: [aws_security_group.redis (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group.redis (expand)" references: [aws_vpc.vpc (expand) var.name]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_internet_gateway.gw (expand)" references: [var.name aws_vpc.vpc (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group_rule.db (expand)" references: [aws_security_group.db (expand) aws_security_group.app (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_app" references: [aws_security_group.app (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_db" references: [aws_security_group.db (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group_rule.web (expand)" references: [aws_security_group.app (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_rule_all" references: [aws_security_group_rule.all (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_rule_ssh" references: [aws_security_group_rule.ssh (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_vpc" references: [aws_vpc.vpc (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_internet_gateway" references: [aws_internet_gateway.gw (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_rule_https" references: [aws_security_group_rule.https (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group.app (expand)" references: [aws_vpc.vpc (expand) var.name var.name]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_vpc.vpc (expand)" references: [var.name]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "var.region" references: []
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "var.name" references: []
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_rule_web" references: [aws_security_group_rule.web (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_rule_db" references: [aws_security_group_rule.db (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "output.aws_security_group_rule_redis" references: [aws_security_group_rule.redis (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group_rule.https (expand)" references: [aws_security_group.app (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group_rule.ssh (expand)" references: [aws_security_group.app (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group_rule.all (expand)" references: [aws_security_group.app (expand)]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group.db (expand)" references: [aws_vpc.vpc (expand) var.name]
+2021/01/06 19:00:38 [DEBUG] ReferenceTransformer: "aws_security_group_rule.redis (expand)" references: [aws_security_group.app (expand) aws_security_group.redis (expand)]
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_vpc - *terraform.NodeApplyableOutput
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/01/06 19:00:38 [TRACE] AttachDependenciesTransformer: aws_security_group.app depends on [aws_vpc.vpc]
+2021/01/06 19:00:38 [TRACE] AttachDependenciesTransformer: aws_vpc.vpc depends on []
+2021/01/06 19:00:38 [TRACE] AttachDependenciesTransformer: aws_security_group_rule.all depends on [aws_security_group.app aws_vpc.vpc]
+2021/01/06 19:00:38 [TRACE] AttachDependenciesTransformer: aws_security_group.db depends on [aws_vpc.vpc]
+2021/01/06 19:00:38 [TRACE] AttachDependenciesTransformer: aws_security_group_rule.redis depends on [aws_security_group.app aws_security_group.redis aws_vpc.vpc]
+2021/01/06 19:00:38 [TRACE] AttachDependenciesTransformer: aws_security_group_rule.https depends on [aws_security_group.app aws_vpc.vpc]
+2021/01/06 19:00:38 [TRACE] AttachDependenciesTransformer: aws_security_group_rule.ssh depends on [aws_security_group.app aws_vpc.vpc]
+2021/01/06 19:00:38 [TRACE] AttachDependenciesTransformer: aws_security_group_rule.db depends on [aws_security_group.app aws_security_group.db aws_vpc.vpc]
+2021/01/06 19:00:38 [TRACE] AttachDependenciesTransformer: aws_security_group.redis depends on [aws_vpc.vpc]
+2021/01/06 19:00:38 [TRACE] AttachDependenciesTransformer: aws_internet_gateway.gw depends on [aws_vpc.vpc]
+2021/01/06 19:00:38 [TRACE] AttachDependenciesTransformer: aws_security_group_rule.web depends on [aws_security_group.app aws_vpc.vpc]
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/01/06 19:00:38 [TRACE] ForcedCBDTransformer: "aws_security_group.app (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/01/06 19:00:38 [TRACE] ForcedCBDTransformer: "aws_vpc.vpc (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/01/06 19:00:38 [TRACE] ForcedCBDTransformer: "aws_security_group.db (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/01/06 19:00:38 [TRACE] ForcedCBDTransformer: "aws_security_group_rule.redis (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/01/06 19:00:38 [TRACE] ForcedCBDTransformer: "aws_security_group_rule.https (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/01/06 19:00:38 [TRACE] ForcedCBDTransformer: "aws_security_group_rule.ssh (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/01/06 19:00:38 [TRACE] ForcedCBDTransformer: "aws_security_group_rule.all (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/01/06 19:00:38 [TRACE] ForcedCBDTransformer: "aws_security_group.redis (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/01/06 19:00:38 [TRACE] ForcedCBDTransformer: "aws_internet_gateway.gw (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/01/06 19:00:38 [TRACE] ForcedCBDTransformer: "aws_security_group_rule.db (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/01/06 19:00:38 [TRACE] ForcedCBDTransformer: "aws_security_group_rule.web (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    output.aws_security_group_app - *terraform.NodeApplyableOutput
+    output.aws_security_group_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    output.aws_vpc - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_vpc - *terraform.NodeApplyableOutput
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    output.aws_security_group_app - *terraform.NodeApplyableOutput
+    output.aws_security_group_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    output.aws_vpc - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_vpc - *terraform.NodeApplyableOutput
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    output.aws_security_group_app - *terraform.NodeApplyableOutput
+    output.aws_security_group_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    output.aws_vpc - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_vpc - *terraform.NodeApplyableOutput
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/01/06 19:00:38 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.name - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    output.aws_security_group_app - *terraform.NodeApplyableOutput
+    output.aws_security_group_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    output.aws_vpc - *terraform.NodeApplyableOutput
+    var.region - *terraform.NodeRootVariable
+  output.aws_internet_gateway - *terraform.NodeApplyableOutput
+    aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_app - *terraform.NodeApplyableOutput
+    aws_security_group.app (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_db - *terraform.NodeApplyableOutput
+    aws_security_group.db (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_redis - *terraform.NodeApplyableOutput
+    aws_security_group.redis (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_all - *terraform.NodeApplyableOutput
+    aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_db - *terraform.NodeApplyableOutput
+    aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_https - *terraform.NodeApplyableOutput
+    aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_redis - *terraform.NodeApplyableOutput
+    aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_ssh - *terraform.NodeApplyableOutput
+    aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_security_group_rule_web - *terraform.NodeApplyableOutput
+    aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+  output.aws_vpc - *terraform.NodeApplyableOutput
+    aws_vpc.vpc (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_internet_gateway.gw (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.all (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.db (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.https (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.redis (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.ssh (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group_rule.web (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.name - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2021/01/06 19:00:38 [DEBUG] Starting graph walk: walkPlan
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "var.name"
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "var.region"
+2021/01/06 19:00:38 [TRACE] vertex "var.name": starting visit (*terraform.NodeRootVariable)
+2021/01/06 19:00:38 [TRACE] vertex "var.region": starting visit (*terraform.NodeRootVariable)
+2021/01/06 19:00:38 [TRACE] vertex "var.name": visit complete
+2021/01/06 19:00:38 [TRACE] vertex "var.region": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2021/01/06 19:00:38 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2021-01-06T19:00:38.439+0900 [INFO]  plugin: configuring client automatic mTLS
+2021/01/06 19:00:38 [TRACE] backend/local: waiting for the running operation to stop
+2021/01/06 19:00:38 [WARN] terraform: Stop called, initiating interrupt sequence
+2021/01/06 19:00:38 [WARN] terraform: run context exists, stopping
+2021/01/06 19:00:38 [INFO] terraform: waiting for graceful stop to complete
+2021/01/06 19:00:38 [TRACE] Context: requesting providers and provisioners to gracefully stop
+2021-01-06T19:00:38.462+0900 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5]
+2021-01-06T19:00:38.477+0900 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5 pid=75111
+2021-01-06T19:00:38.477+0900 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5
+2021-01-06T19:00:38.510+0900 [INFO]  plugin.terraform-provider-aws_v3.22.0_x5: configuring server automatic mTLS: timestamp=2021-01-06T19:00:38.509+0900
+2021-01-06T19:00:38.530+0900 [DEBUG] plugin: using plugin: version=5
+2021-01-06T19:00:38.530+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: plugin address: address=/var/folders/pd/949hjn3j2970x38wh0stzjfh0000gn/T/plugin304553082 network=unix timestamp=2021-01-06T19:00:38.530+0900
+2021-01-06T19:00:38.573+0900 [TRACE] plugin.stdio: waiting for stdio data
+2021/01/06 19:00:38 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2021/01/06 19:00:38 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2021/01/06 19:00:38 [TRACE] GRPCProvider: GetSchema
+2021/01/06 19:00:38 [TRACE] GRPCProvider: Stop
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: panic: close of nil channel
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: 
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: goroutine 41 [running]:
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).stop(0xc000c168e0)
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:201 +0x71
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).Stop(0xc000c168e0, 0x7e27e40, 0xc000f879b0, 0xc000f87a70, 0xc000c168e0, 0xc000f879b0, 0xc001090ba0)
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:215 +0xa5
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/internal/tfplugin5._Provider_Stop_Handler(0x71da3e0, 0xc000c168e0, 0x7e27e40, 0xc000f879b0, 0xc000cfa5a0, 0x0, 0x7e27e40, 0xc000f879b0, 0x0, 0x0)
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/internal/tfplugin5/tfplugin5_grpc.pb.go:434 +0x214
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: google.golang.org/grpc.(*Server).processUnaryRPC(0xc000233a40, 0x7e4b620, 0xc00101ea80, 0xc0002a6400, 0xc001040720, 0xb2315c8, 0x0, 0x0, 0x0)
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1194 +0x522
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: google.golang.org/grpc.(*Server).handleStream(0xc000233a40, 0x7e4b620, 0xc00101ea80, 0xc0002a6400, 0x0)
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1517 +0xd05
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: google.golang.org/grpc.(*Server).serveStreams.func1.2(0xc000b22b30, 0xc000233a40, 0x7e4b620, 0xc00101ea80, 0xc0002a6400)
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:859 +0xa5
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2021-01-06T19:00:38.576+0900 [DEBUG] plugin.terraform-provider-aws_v3.22.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:857 +0x1fd
+2021-01-06T19:00:38.579+0900 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021/01/06 19:00:38 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "aws_vpc.vpc (expand)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "output.aws_vpc" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "aws_security_group.db (expand)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "aws_security_group.redis (expand)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "output.aws_security_group_db" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "output.aws_security_group_redis" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "aws_security_group.app (expand)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "aws_internet_gateway.gw (expand)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "aws_security_group_rule.web (expand)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "aws_security_group_rule.redis (expand)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "aws_security_group_rule.db (expand)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "output.aws_security_group_rule_web" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "output.aws_internet_gateway" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "aws_security_group_rule.ssh (expand)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "output.aws_security_group_rule_redis" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "output.aws_security_group_rule_ssh" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "output.aws_security_group_app" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "aws_security_group_rule.all (expand)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "aws_security_group_rule.https (expand)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "output.aws_security_group_rule_db" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "output.aws_security_group_rule_https" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "output.aws_security_group_rule_all" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2021/01/06 19:00:38 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2021-01-06T19:00:38.579+0900 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.22.0/darwin_amd64/terraform-provider-aws_v3.22.0_x5 pid=75111 error="exit status 2"
+2021/01/06 19:00:38 [WARN] terraform: stop complete
+2021/01/06 19:00:38 [TRACE] backend/local: graceful stop has completed
+2021/01/06 19:00:38 [INFO] backend/local: plan operation completed
+2021-01-06T19:00:38.579+0900 [DEBUG] plugin: plugin exited
