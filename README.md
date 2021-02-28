@@ -75,6 +75,6 @@ common => env
 
 ```
 $ terraform init
-($ terraform plan)
+($ terraform plan) # 実行内容の下書き
 $ terraform apply
 ```
